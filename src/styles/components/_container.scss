@@ -1,0 +1,19 @@
+
+.container__image {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 20rem;
+}
+
+.container__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: $xl-size;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .container__buttons {
+        flex-direction: row;
+    }
+  }

@@ -1,0 +1,102 @@
+a. User Stories:
+================
+
+1- As a user I should be able to create an account.
+2- As a user I should be able to login.
+3- As a user I should be able to login using Facebook and Google.
+4- As a user I should be able to create a subscription.
+5- As a user I should be able to cancel a subscription.
+
+
+b. Websote Features:
+====================
+
+1- User can create shows lists.
+2- User can rate shows.
+3- User can delete browsing history.
+4- User can get notified on new shows.
+5- User gift a show to a friend.
+
+APIs:
+=====
+1- POST /users
+    - create a new user
+    - request body 
+        {
+            first_name: <string>,
+            last_name: <string>,
+            email: <string>,
+            password: <string>
+        }
+
+2- POST /users/login
+    - login user
+    - request body 
+        {
+            email: <string>,
+            password: <string>
+        }
+
+3- PUT /users
+    - update user profile
+    - headers
+        Authorization: <token>
+    - request body: 
+        {
+            first_name: <string>
+            last_name: <string>
+        } 
+
+4- POST /lists
+    - create a new lists
+     - headers
+        Authorization: <token>
+    - request body
+        {
+            name: <string>,
+            description: <string>,
+            category: <string>
+        }
+
+5- POST /lists/:list_id
+    - add a new show to list
+    - headers
+        Authorization: <token>
+    - request body 
+        {
+            show_id: <string>
+        }
+
+6- PUT /lists/:list_id
+    - update list`
+    - headers
+        Authorization: <token>
+    - request body
+        {
+            name: <string>,
+            description: <string>,
+            category: <string>,
+            shows: <array>
+        }
+
+7- GET /lists
+    - get all lists
+    - headers
+        Authorization: <token>
+
+8- GET /lists/:list_id
+    - get list details
+     - headers
+        Authorization: <token>
+
+9- GET /shows
+    - get all shows
+
+10- POST /shows/:show_id/rate
+    - rate a show
+     - headers
+        Authorization: <token>
+    - request_body
+        {
+            rate: <string>
+        }
