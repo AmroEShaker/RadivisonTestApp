@@ -4,7 +4,7 @@ import ImageOne from "../../public/assets/ImageOne.jpg";
 import ImageTwo from "../../public/assets/ImageTwo.jpg";
 import ImageThree from "../../public/assets/ImageThree.jpg";
 
-export default class IndecisionApp extends React.Component {
+export default class RadivisonTestApp extends React.Component {
   state = {
     image: ImageOne,
     button1Clicked: true,
